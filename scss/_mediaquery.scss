@@ -1,0 +1,96 @@
+// // _mediaqueries.scss
+
+@media (max-width:1024px) {
+
+    .logo-image{
+        margin-top: 6.5rem;
+        img{
+            // width: 380px;
+            width: 38rem;
+        }
+    }
+
+    .mountains-image{
+        height: 270.63px;
+    }
+
+    .waves-image{
+        background-image: url(/assets/Waves_Tablet.svg);
+        height: 58px;
+    }
+
+    .products-image{
+        height: 208.65px;
+        img{
+            width: 580px;
+        }
+    }
+
+    .brand-info{
+        margin-top: 3.5rem;
+    }
+
+    .trademark{
+        margin: 5rem 0 6.7rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .main-container{
+    @include background('/assets/Pattern_Mobile_ToiletPaper.jpg');
+    }
+
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1px;
+    }
+
+    .logo-image{
+        margin-top: 7.4rem;
+        img{
+            width: 315px;
+        }
+    }
+
+    .brand-images{
+        margin-top: 3rem;
+    }
+
+    .mountains-image{
+        height: 157.86px;
+    }
+
+    .waves-image{
+        background-image: url(/assets/Waves_Mobile.svg);
+        height: 4rem;
+    }
+
+    .products-image{
+        height: 113.32px;
+        img{
+            width: 315px;
+        }
+    }
+
+    .brand-info{
+        margin-top: 2rem;
+    }
+
+    .coming-soon{
+        h3{
+            @include fontSize(3.4rem, 3.8rem);
+        }
+    }
+
+    .contact{
+        h4{
+            @include fontSize(2.8rem, 3.2rem);
+        }
+    }
+    
+    .trademark{
+        margin: 4.7rem 2rem 6.5rem;
+    }
+}

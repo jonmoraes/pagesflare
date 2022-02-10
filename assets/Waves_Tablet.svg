@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="58px" viewBox="0 0 1024 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Waves_Tablet</title>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Waves_Tablet" fill="#76C4D5">
+            <path d="M1024,58 L1024,0 L926.24,33.25 C909.6,38.9375 882.4,38.9375 865.76,33.25 L798.24,10.25 C781.6,4.5625 754.4,4.5625 737.76,10.25 L670.24,33.25 C653.6,38.9375 626.4,38.9375 609.76,33.25 L542.24,10.25 C525.6,4.5625 498.4,4.5625 481.76,10.25 L414.24,33.25 C397.6,38.9375 370.4,38.9375 353.76,33.25 L286.24,10.3125 C269.6,4.625 242.4,4.625 225.76,10.3125 L158.24,33.25 C141.6,38.9375 114.4,38.9375 97.76,33.25 L0,0 L0,58 L1024,58 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+// _mixins.scss
+
+@mixin background($imagepath, $position:default, $repeat:default, $size: default) {
+    background-image: url($imagepath);
+    background-position: $position;
+    background-repeat: $repeat;
+    background-size: $size;
+}
+
+@mixin imageWidth($display, $width, $margin) {
+    display: $display;
+    width: $width;
+    margin: $margin;
+}
+
+@mixin fontSize($font-size, $line-height, $letter-spacing:default) {
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
