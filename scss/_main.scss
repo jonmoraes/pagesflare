@@ -1,0 +1,83 @@
+// _main.scss
+@import 'mixins';
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 2rem;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.main-container{
+    grid-column: 1/13;
+    @include background('/assets/Pattern_Desktop_ToiletPaper.jpg',center, no-repeat);
+}
+
+.logo-image{
+    // grid-column: 4/10;
+    // width: 100%;
+    margin-top: 8.3rem;
+    img{
+        @include imageWidth(block, 480px, 0 auto);
+    }
+}
+
+.brand-images{
+    position: relative;
+    margin-top: 1.7rem;
+}
+
+.mountains-image{
+    @include background('/assets/Home_Hero_Landscape.png',center, no-repeat, cover);
+    height: 433px;
+}
+
+.waves-image{
+    @include background('/assets/Waves_Desktop.svg',center, no-repeat, cover);
+    width: 100%;
+    height: 93px;
+    position: absolute;
+    bottom: -3px;
+}
+
+.products-image{
+    width: 100%;
+    height: 327px;
+    position: absolute;
+    bottom: 0;
+    img{
+        @include imageWidth(block, 909px, 0 auto);
+    }
+}
+
+.secondary-container{
+    grid-column: 1/13;
+    background-color: $backgroundColor;
+}
+
+.brand-info{
+    margin-top: 3rem;
+}
+
+.coming-soon{
+    h3{
+        @include fontSize(4.4rem, 5.2rem);
+    }
+}
+
+.contact{
+    margin-top: 2.1rem;
+    h4{
+        @include fontSize(3.2rem, 3.8rem, 0);
+    }
+}
+
+.trademark{
+    margin: 4.9rem 0 5.7rem;
+    p{
+        color: $fontColor;
+        font-family: $fontRegular;
+        @include fontSize(1.6rem, 2rem, 0);
+    }
+}
