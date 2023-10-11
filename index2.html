@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Weather API</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <script defer src="https://cdn.aerisapi.com/sdk/js/latest/aerisweather.min.js"></script>
+
+</head>
+<body>
+    <script>
+fetch('https://api.aerisapi.com/lightning/79351?format=json&filter=cg&limit=10&client_id=4cJX8LPMMBqYFoA8ksh3n&client_secret=UJUzv8ijyfbKO0y9GnNonAPpSVClhN34dq9VPNFO')
+    .then((response) => {
+        return response.json();
+    })
+    .then((json) => {
+        if (!json.success) {
+            console.log('Oh no!');
+        } else {
+            console.log(json);
+        }
+    })
+    .catch((error) => {
+        console.log('Oh no!');
+    });
+    </script>
+
+</body>
+</html>
