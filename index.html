@@ -8,7 +8,7 @@
     <form id="login-form">
         <label for="password">Password:</label>
         <input type="password" id="password" required>
-        <button type="button" onclick="login()">Login</button>
+        <button type="button" onclick="enter_site()">Login</button>
     </form>
     <p id="message"></p>
 
@@ -26,11 +26,17 @@
         // Simulated hashed password (in a real application, this would come from the server)
         const hashedPassword = "394fb8e5148ddc827627518e5ed6ac44c97d3544";
 
-        function login() {
+        function enter_site() {
             const inputPassword = document.getElementById("password").value;
-            const hashedInputPassword = sha1(inputPassword);
+          //  const hashedInputPassword = sha1(inputPassword);
 
-            if (hashedInputPassword === hashedPassword) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(inputPassword);
+            const hashBuffer = window.crypto.subtle.digest('SHA-1', data);
+             hashBuffer.then(buffer => {
+                const hashArray = Array.from(new Uint8Array(buffer));
+                hashedInputPassword= hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+                if (hashedInputPassword === hashedPassword) {
                 document.getElementById("message").textContent = "Login successful!";
                 
                 // Create a session token and store it in localStorage
@@ -42,6 +48,9 @@
             } else {
                 document.getElementById("message").textContent = "Login failed. Incorrect password.";
             }
+            });
+
+          
         }
 
         // Simple SHA-1 hash function (not recommended for real security)
