@@ -7,7 +7,7 @@
     <h2>Login</h2>
     <form id="login-form">
         <label for="password">Password:</label>
-        <input type="password" id="password" required>
+        <input type="password" id="password" onkeydown="buttonpress(this)" required>
         <button type="button" onclick="enter_site()">Login</button>
     </form>
     <p id="message"></p>
@@ -25,6 +25,14 @@
 
         // Simulated hashed password (in a real application, this would come from the server)
         const hashedPassword = "394fb8e5148ddc827627518e5ed6ac44c97d3544";
+
+        function buttonpress(text) {
+            
+             if(event.key === 'Enter') {
+                event.preventDefault();
+                enter_site();    
+             }            
+        }       
 
         function enter_site() {
             const inputPassword = document.getElementById("password").value;
